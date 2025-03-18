@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[]args){
         Graph graph = new Graph(5);
@@ -12,11 +14,13 @@ public class Main {
         graph.addEdge(2,3,1);
         graph.addEdge(2,4,7);
         graph.addEdge(4,0,3);
-        graph.addEdge(4,2,4);
+        graph.addEdge(4,2,7);
 
         graph.print();
         PrimsAlgo primsAlgo = new PrimsAlgo();
         primsAlgo.algorithm(graph);
-    }
 
+        Kruskals kruskals = new Kruskals();
+        kruskals.algorithm(graph);
+    }
 }
