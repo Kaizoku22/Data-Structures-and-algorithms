@@ -13,8 +13,8 @@ public class Graph {
     public void addNode(Node node){
         nodes.add(node);
     }
-    public void addEdge(int src,int dst){
-        matrix[src][dst]=1;
+    public void addEdge(int src,int dst, int weight){
+        matrix[src][dst]=weight;
     }
     public boolean checkEdge(int src,int dst){
         if(matrix[src][dst]==1){
